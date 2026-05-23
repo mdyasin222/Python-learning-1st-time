@@ -1,0 +1,18 @@
+#https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/M
+t=int(input())
+ok=input()
+num=ok.split()
+a=[]
+for i in num:
+    a.append(int(i))
+
+mn=min(a)
+mnpos=a.index(mn)
+mx=max(a)
+mxpos=a.index(mx)
+temp=0
+temp=a[mnpos]
+a[mnpos]=a[mxpos]
+a[mxpos]=temp
+for i in a:
+    print(i,end=" ")
