@@ -1,0 +1,10 @@
+# 1
+love=[x for x in range(100)]
+fun=list(filter(lambda x:x%2==0,love))
+print(fun) 
+#2
+k=[0,1,[],None,[1,2,3],'AEIOU',None,True,False,None,1233]
+clean_ok=list(filter(None,k))
+print(clean_ok)
+
+#3
