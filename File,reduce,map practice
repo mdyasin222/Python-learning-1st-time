@@ -1,0 +1,42 @@
+/* sample.txt
+ rakib rakib
+ ramim ajo
+ khelte jabe
+ ai lover ramjaf
+
+/*
+
+
+
+from os import replace
+from functools import reduce
+with open("./sample_data/sample.txt","r") as file:
+  strings_li=file.readlines()
+  
+
+  total_of_lines=len(strings_li)
+  print(total_of_lines)
+
+  total_word=list(map(lambda x:len(x.split()),strings_li))
+  print(total_word)
+
+  total_word_no=reduce(lambda x,y:x+y,total_word)
+  print(total_word_no)
+
+  print(strings_li)
+  strings_li=list(map(str.strip,strings_li))
+  print(strings_li)
+  strings_li=list(map(lambda x : x.replace(" ",""),strings_li))
+  print(strings_li) 
+  strings_li=list(map(lambda x:len(x),strings_li))
+  charac=reduce(lambda x,y:x+y,strings_li)
+  print(charac)
+
+  with open("./sample_data/to_solve_life.txt","w") as file:
+       file.write(f" {total_of_lines}\n{total_word_no}\n {charac}")
+    
+
+
+
+  
+
