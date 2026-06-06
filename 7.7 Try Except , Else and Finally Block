@@ -1,0 +1,10 @@
+
+try:
+  file=open("./sample_data/sam.txt","r")
+except Exception as e:
+  print(e)
+else:
+  print(file.read())
+finally:
+  print("GPU stop")
+
