@@ -1,0 +1,6 @@
+#Given a list of words, use filter() and lambda to return only words whose length is greater than 4.
+
+import ast
+lst=ast.literal_eval(input())
+lst=list(filter(lambda x:len(x)>4,lst))
+print(lst)
