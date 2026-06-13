@@ -1,0 +1,16 @@
+#Problem 4: Square of Even Numbers (Map + Filter + Lambda)
+#Problem:
+#Write a one-line Python expression using map(), filter(), and lambda that takes a list of integers and returns the squares of even numbers only.
+
+
+import ast
+
+lst = ast.literal_eval(input())
+#print(type(lst))
+def squre(x):
+  return x**2
+
+lst=list(map(squre,lst))
+
+lst=list(filter(lambda x:x%2==0,lst))
+print(lst)
