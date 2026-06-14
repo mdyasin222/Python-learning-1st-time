@@ -1,0 +1,22 @@
+#  {"Rahim", "Karim", "Sakib", "Jamal"}
+#  {"Sakib", "Jamal", "Rafiq", "Nadim"}
+
+
+A = eval(input())
+B=eval(input())
+
+Mutual=A.intersection(B)
+print(Mutual)
+
+#UniqueA
+uniqueA=A-B
+print(uniqueA)
+
+#uniqueB
+uniqueB=B-A
+print(uniqueB)
+
+#TotalUniqueFriend
+
+Total_friend=A.union(B)
+print(len(Total_friend))
