@@ -1,0 +1,15 @@
+ #Write a Python program to count how many lines are in a text file named story.txt.
+ #If the file does not exist, handle the exception and print an error message, otherwise read the text file ( test it with both conditions ). Print a message finally. 
+
+
+try:
+  with open("./sample_data/story.txt","r") as f:
+    string=f.readlines()
+    print(len(string))
+except Exception as e:
+  print(e)
+else:
+  print(string)
+finally:
+  print('GPU Stop')
+
