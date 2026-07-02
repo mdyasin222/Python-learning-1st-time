@@ -1,0 +1,66 @@
+#CLASS
+class Phone:
+  catagory="electronic"
+ #CONSTRUCTOR
+  def __init__(self,model,battery,camera,battery_perchantage=10):
+    self.model=model
+    self.battery=battery
+    self.battery_perchantage=battery_perchantage
+    self.camera=camera
+
+
+
+  #METHOD
+  def charge(self,hour):
+    print(f"charging is {hour}")
+
+  def capture(self,photo):
+    if self.battery_perchantage < 0:
+     print("no")
+    else :
+     self.battery_perchantage+=photo
+     print("yes")
+  class coling_machanism:
+    def _init_(self,coling_method):
+      self.coling_method=coling_method
+    def coling_on(self):
+      print(f"self.coling_method")
+
+
+apple=Phone("ok",189,10)
+apple.capture(5)
+print(apple.model)
+
+class Child(Phone):
+
+  def __init__(self, model, battery, camera, processor):
+    super().__init__(model, battery, camera)
+    self.processor=processor
+
+  def charge(self,hour):
+    print("fast charging")
+    super().charge(hour) # Removed the explicit 'self' from the super() call
+
+  pro=Child("motorola",5000,10,"sanp")
+print(pro.model)
+pro.charge(2)
+
+class cooling_machanism:
+  def __init__(self,cooling_method):
+    self.cooling_method=cooling_method # Corrected typo: coliing_method -> cooling_method
+  def coling_on(self):
+    print(f"coling on {self.cooling_method}")
+
+
+class mulitiple(Child,cooling_machanism):
+  def __init__(self, model, battery, camera, processor,cooling_method):
+    Child.__init__(self,model,battery,camera,processor)
+    cooling_machanism.__init__(self,cooling_method)
+pro_life=mulitiple("Yasin",400,34,"sd","Nitrogen")
+print(pro_life.model)
+print(pro_life.battery)
+print(pro_life.camera)
+print(pro_life.processor)
+print(pro_life.coling_method)
+print(pro_life.coling_on())
+#print(pro_life.charge(2))
