@@ -1,0 +1,23 @@
+import numpy as np
+diagonal=np.diag([1,2,3,4])
+print("digonal:","\n",diagonal)
+
+print("\n")
+identity=np.eye(3)
+print("identity\n",identity)
+
+identity=np.eye(3,4)
+print("identity, row,colome\n",identity)
+
+identity=np.eye(3,4,-1)
+print("identity, row,colome\n",identity)
+
+identity=np.eye(3,4,1)
+print("identity, row,colome\n",identity)
+
+
+
+
+
+
+
