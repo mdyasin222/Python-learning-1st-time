@@ -1,0 +1,30 @@
+import pandas as pd
+
+df = pd.read_csv('student_data.csv')
+
+# StudentID -Data Structure Marks- Algorithm Marks- Location
+
+#df
+
+#print(type(df))
+#df
+#df.head(5)
+#df.tail(5)
+#df.sample(10)
+#df.describe()
+#df.info()
+#df['FullName']          ## series
+#df.loc[0]              # row show korre
+#df.loc[[2,3,9]] 
+#df.loc[2:9]
+#df.loc[:,['Python Marks','Location']]
+#df.loc[3:7, 'Location']
+
+#copy = df.sort_values(['Data Structure Marks', 'Python Marks'], ascending=[0,1])
+#print(copy)
+
+
+#completed = df.loc[df['CompletionStatus'] == 'Completed']
+
+
+
